@@ -207,11 +207,153 @@ const questions = [
     "answer": "Method Resolution Order",
     "difficulty": "hard"
   },
-  {
-    "id": 30,
+  },
+{
+  "id": 30,
     "question": "What is the output of <code>print(0.1 + 0.2 == 0.3)</code>?",
-    "options": ["True", "False", "Error", "None"],
-    "answer": "False",
-    "difficulty": "hard"
-  }
+      "options": ["True", "False", "Error", "None"],
+        "answer": "False",
+          "difficulty": "hard"
+},
+// ADDED FROM DATASET (Converted to MCQ)
+{
+  "id": 31,
+    "question": "What is the output of the following lambda function?<br><code>(lambda x: x ** 2)(5)</code>",
+      "options": ["10", "25", "5", "Error"],
+        "answer": "25",
+          "difficulty": "medium"
+},
+{
+  "id": 32,
+    "question": "What defines a function in Python?",
+      "options": ["function", "def", "func", "define"],
+        "answer": "def",
+          "difficulty": "easy"
+},
+{
+  "id": 33,
+    "question": "How do you start a comment in Python?",
+      "options": ["//", "/*", "#", "<!--"],
+        "answer": "#",
+          "difficulty": "easy"
+},
+{
+  "id": 34,
+    "question": "What is the output of: <code>print(sorted(['red', 'green', 'orange']))</code>",
+      "options": ["['green', 'orange', 'red']", "['red', 'green', 'orange']", "['orange', 'green', 'red']", "['green', 'red', 'orange']"],
+        "answer": "['green', 'orange', 'red']",
+          "difficulty": "medium"
+},
+{
+  "id": 35,
+    "question": "Which data structure follows LIFO (Last In First Out)?",
+      "options": ["Queue", "List", "Stack", "Dictionary"],
+        "answer": "Stack",
+          "difficulty": "medium"
+},
+{
+  "id": 36,
+    "question": "What is init in a Python class?",
+      "options": ["A constructor", "A destructor", "A standard method", "A variable"],
+        "answer": "A constructor",
+          "difficulty": "medium"
+},
+{
+  "id": 37,
+    "question": "Which module is needed to generate random numbers?",
+      "options": ["math", "random", "os", "sys"],
+        "answer": "random",
+          "difficulty": "easy"
+},
+{
+  "id": 38,
+    "question": "What is the result of <code>list(map(lambda x: x*2, [1, 2]))</code>?",
+      "options": ["[1, 2]", "[2, 4]", "[1, 4]", "[2, 2]"],
+        "answer": "[2, 4]",
+          "difficulty": "hard"
+},
+{
+  "id": 39,
+    "question": "How do you import a specific function 'sqrt' from 'math'?",
+      "options": ["import math.sqrt", "from math import sqrt", "using math.sqrt", "import sqrt from math"],
+        "answer": "from math import sqrt",
+          "difficulty": "medium"
+},
+{
+  "id": 40,
+    "question": "What does <code>len([1, 2, 3])</code> return?",
+      "options": ["2", "3", "4", "0"],
+        "answer": "3",
+          "difficulty": "easy"
+},
+{
+  "id": 41,
+    "question": "Which operator performs floor division?",
+      "options": ["/", "//", "%", "**"],
+        "answer": "//",
+          "difficulty": "easy"
+},
+{
+  "id": 42,
+    "question": "What is the output of <code>bool([])</code>?",
+      "options": ["True", "False", "None", "Error"],
+        "answer": "False",
+          "difficulty": "medium"
+},
+{
+  "id": 43,
+    "question": "Which keyword is used to handle exceptions?",
+      "options": ["catch", "except", "handle", "try_catch"],
+        "answer": "except",
+          "difficulty": "medium"
+},
+{
+  "id": 44,
+    "question": "What is a correct tuple?",
+      "options": ["{1, 2}", "[1, 2]", "(1, 2)", "<1, 2>"],
+        "answer": "(1, 2)",
+          "difficulty": "easy"
+},
+{
+  "id": 45,
+    "question": "What is the result of <code>'a' + 'b'</code>?",
+      "options": ["'ab'", "'ba'", "Error", "'a+b'"],
+        "answer": "'ab'",
+          "difficulty": "easy"
+},
+{
+  "id": 46,
+    "question": "Which method adds an element to the end of a list?",
+      "options": ["add()", "insert()", "append()", "push()"],
+        "answer": "append()",
+          "difficulty": "easy"
+},
+{
+  "id": 47,
+    "question": "What is the output of <code>type(3.14)</code>?",
+      "options": ["int", "float", "double", "decimal"],
+        "answer": "float",
+          "difficulty": "easy"
+},
+{
+  "id": 48,
+    "question": "How do you check if 'a' is in 'apple'?",
+      "options": ["'a' inside 'apple'", "'a' in 'apple'", "contains('apple', 'a')", "find('apple', 'a')"],
+        "answer": "'a' in 'apple'",
+          "difficulty": "easy"
+},
+{
+  "id": 49,
+    "question": "What is the key difference between a list and a tuple?",
+      "options": ["Lists are immutable", "Tuples are immutable", "Lists cannot contain strings", "Tuples cannot be indexed"],
+        "answer": "Tuples are immutable",
+          "difficulty": "medium"
+},
+{
+  "id": 50,
+    "question": "What does <code>range(3)</code> produce?",
+      "options": ["1, 2, 3", "0, 1, 2", "0, 1, 2, 3", "1, 2"],
+        "answer": "0, 1, 2",
+          "difficulty": "easy"
+}
 ];
