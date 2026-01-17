@@ -60,8 +60,12 @@ function loadQuestion() {
     // Get current data
     const currentData = quizQuestions[currentQuestionIndex];
 
-    // Update Text
+    // Update Text with Animation
     questionText.innerHTML = currentData.question;
+    questionText.classList.remove('question-animate'); // Reset
+    void questionText.offsetWidth; // Trigger reflow
+    questionText.classList.add('question-animate');
+
     questionCountFn.textContent = `Question ${currentQuestionIndex + 1}/${quizQuestions.length}`;
 
     // Update Progress Bar
@@ -75,6 +79,7 @@ function loadQuestion() {
     currentData.options.forEach((opt, index) => {
         const btn = document.createElement('button');
         btn.classList.add('option-btn');
+        btn.classList.add('option-animate'); // Add pop-in animation
         btn.textContent = opt;
         btn.onclick = () => selectOption(btn, opt, currentData.answer);
         optionsContainer.appendChild(btn);
