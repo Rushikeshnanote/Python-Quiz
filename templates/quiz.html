@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}?v=3">
 </head>
 
 <body>
@@ -51,7 +51,7 @@
                 <h2>Quiz Completed!</h2>
                 <div class="score-display">
                     <span id="final-score">0</span>
-                    <span class="total">/ 5</span>
+                    <span class="total">/ 10</span>
                 </div>
                 <p id="feedback-msg">Great job!</p>
                 <button id="restart-btn" class="btn secondary-btn">Play Again</button>
@@ -63,10 +63,9 @@
 
     <script>
         const USERNAME = "{{ username }}";
-        const DIFFICULTY = "{{ difficulty }}";
     </script>
-    <script src="{{ url_for('static', filename='data.js') }}"></script>
-    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    <script src="{{ url_for('static', filename='data.js') }}?v=3"></script>
+    <script src="{{ url_for('static', filename='script.js') }}?v=3"></script>
 </body>
 
 </html>
