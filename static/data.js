@@ -531,5 +531,186 @@ const questions = [
     "options": ["inherits", "extends", "super", "class"],
     "answer": "class",
     "difficulty": "hard"
+  },
+  // ADDED FROM USER (Batch 3)
+  {
+    "id": 76,
+    "question": "What is the output of print(4 * 'Hi')?",
+    "options": ["Hi4", "HiHiHiHi", "Error", "4Hi"],
+    "answer": "HiHiHiHi",
+    "difficulty": "easy"
+  },
+  {
+    "id": 77,
+    "question": "Which function shows output on screen?",
+    "options": ["input()", "display()", "print()", "show()"],
+    "answer": "print()",
+    "difficulty": "easy"
+  },
+  {
+    "id": 78,
+    "question": "What is the output of print(type(3.14))?",
+    "options": ["float", "<class 'float'>", "double", "number"],
+    "answer": "<class 'float'>",
+    "difficulty": "easy"
+  },
+  {
+    "id": 79,
+    "question": "Which keyword is used to create a loop?",
+    "options": ["repeat", "loop", "for", "iterate"],
+    "answer": "for",
+    "difficulty": "easy"
+  },
+  {
+    "id": 80,
+    "question": "Which symbol is used for logical AND?",
+    "options": ["&&", "&", "and", "AND"],
+    "answer": "and",
+    "difficulty": "easy"
+  },
+  {
+    "id": 81,
+    "question": "What is the output of print('Python'.upper())?",
+    "options": ["python", "PYTHON", "Python", "Error"],
+    "answer": "PYTHON",
+    "difficulty": "medium"
+  },
+  {
+    "id": 82,
+    "question": "Which method removes whitespace from string ends?",
+    "options": ["trim()", "strip()", "cut()", "remove()"],
+    "answer": "strip()",
+    "difficulty": "medium"
+  },
+  {
+    "id": 83,
+    "question": "What is the output of print(9 / 2)?",
+    "options": ["4", "4.5", "5", "Error"],
+    "answer": "4.5",
+    "difficulty": "medium"
+  },
+  {
+    "id": 84,
+    "question": "Which keyword is used to skip an iteration?",
+    "options": ["pass", "skip", "continue", "break"],
+    "answer": "continue",
+    "difficulty": "medium"
+  },
+  {
+    "id": 85,
+    "question": "Which method adds multiple elements to a list?",
+    "options": ["append()", "add()", "extend()", "insert()"],
+    "answer": "extend()",
+    "difficulty": "medium"
+  },
+  {
+    "id": 86,
+    "question": "What is the output of print(len({1,2,2,3}))?",
+    "options": ["4", "3", "2", "Error"],
+    "answer": "3",
+    "difficulty": "medium"
+  },
+  {
+    "id": 87,
+    "question": "Which operator is used for floor division?",
+    "options": ["/", "//", "%", "**"],
+    "answer": "//",
+    "difficulty": "medium"
+  },
+  {
+    "id": 88,
+    "question": "Which keyword is used to create an empty function?",
+    "options": ["pass", "skip", "empty", "null"],
+    "answer": "pass",
+    "difficulty": "medium"
+  },
+  {
+    "id": 89,
+    "question": "Which data type does range() return?",
+    "options": ["list", "tuple", "range", "set"],
+    "answer": "range",
+    "difficulty": "medium"
+  },
+  {
+    "id": 90,
+    "question": "What is the output of print(2 in [1,2,3])?",
+    "options": ["True", "False", "None", "Error"],
+    "answer": "True",
+    "difficulty": "medium"
+  },
+  {
+    "id": 91,
+    "question": "What is the output of print({}.get('a', 10))?",
+    "options": ["None", "Error", "10", "a"],
+    "answer": "10",
+    "difficulty": "hard"
+  },
+  {
+    "id": 92,
+    "question": "Which function returns the memory address of an object?",
+    "options": ["type()", "id()", "addr()", "ref()"],
+    "answer": "id()",
+    "difficulty": "hard"
+  },
+  {
+    "id": 93,
+    "question": "What is the output of print(bool(' '))?",
+    "options": ["True", "False", "None", "Error"],
+    "answer": "True",
+    "difficulty": "hard"
+  },
+  {
+    "id": 94,
+    "question": "Which collection is unordered and mutable?",
+    "options": ["List", "Tuple", "Set", "String"],
+    "answer": "Set",
+    "difficulty": "hard"
+  },
+  {
+    "id": 95,
+    "question": "What is the output of print(3 < 2 < 1)?",
+    "options": ["True", "False", "Error", "None"],
+    "answer": "False",
+    "difficulty": "hard"
+  },
+  {
+    "id": 96,
+    "question": "Which method converts iterable into a list?",
+    "options": ["list()", "iter()", "tuple()", "set()"],
+    "answer": "list()",
+    "difficulty": "hard"
+  },
+  {
+    "id": 97,
+    "question": "What is the output of print(type({}))?",
+    "options": ["set", "dict", "<class 'dict'>", "<class 'set'>"],
+    "answer": "<class 'dict'>",
+    "difficulty": "hard"
+  },
+  {
+    "id": 98,
+    "question": "Which keyword is used to raise an exception?",
+    "options": ["throw", "error", "raise", "except"],
+    "answer": "raise",
+    "difficulty": "hard"
+  },
+  {
+    "id": 99,
+    "question": "What does __name__ == '__main__' mean?",
+    "options": [
+      "Module imported",
+      "Script is running directly",
+      "Error",
+      "Function call"
+    ],
+    "answer": "Script is running directly",
+    "difficulty": "hard"
+  },
+  {
+    "id": 100,
+    "question": "Which method copies a list?",
+    "options": ["copy()", "clone()", "duplicate()", "replicate()"],
+    "answer": "copy()",
+    "difficulty": "hard"
   }
 ];
