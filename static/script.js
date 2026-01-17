@@ -179,9 +179,6 @@ function showResults() {
         }
     });
 
-    resultModal.classList.remove('hidden');
-    finalScoreSpan.textContent = score;
-
     // Update final progress to 100%
     progressFill.style.width = '100%';
 
@@ -196,15 +193,10 @@ function showResults() {
         }),
     });
 
-    // Custom feedback
-    const percentage = (score / quizQuestions.length) * 100;
-    if (percentage === 100) {
-        feedbackMsg.textContent = "Perfect! You're a Python Master! 🐍";
-    } else if (percentage >= 70) {
-        feedbackMsg.textContent = "Great job! Keep practicing.";
-    } else {
-        feedbackMsg.textContent = "Good effort! Review the basics and try again.";
-    }
+    // Redirect to Result Page
+    setTimeout(() => {
+        window.location.href = `/result?score=${score}&total=${quizQuestions.length}`;
+    }, 500);
 }
 
 // Restart Game

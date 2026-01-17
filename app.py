@@ -18,6 +18,24 @@ def login():
     # log_activity("Visit: Login Page")
     return render_template('login.html')
 
+@app.route('/result')
+def result():
+    score = request.args.get('score', 0)
+    total = request.args.get('total', 10)
+    
+    # Always motivational messages
+    messages = [
+        "Outstanding performance!",
+        "You are doing amazing!",
+        "Keep up the great work!",
+        "Python Master in the making!",
+        "Excellent effort!"
+    ]
+    import random
+    message = random.choice(messages)
+    
+    return render_template('result.html', score=score, total=total, message=message)
+
 @app.route('/api/login', methods=['POST'])
 def handle_login():
     username = request.form.get('username')
