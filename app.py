@@ -8,8 +8,10 @@ LOG_FILE = 'activity.log'
 
 def log_activity(message):
     timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    log_entry = f"[{timestamp}] {message}"
+    print(log_entry) # Print to console for Render Logs
     with open(LOG_FILE, 'a') as f:
-        f.write(f"[{timestamp}] {message}\n")
+        f.write(log_entry + "\n")
 
 @app.route('/')
 def login():
