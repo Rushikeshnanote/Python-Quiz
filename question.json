@@ -1,0 +1,57 @@
+[
+    {
+        "id": 1,
+        "question": "What is the output of print(2 ** 3)?",
+        "options": [
+            "5",
+            "6",
+            "8",
+            "9"
+        ],
+        "answer": "8"
+    },
+    {
+        "id": 2,
+        "question": "Which keyword is used to define a function in Python?",
+        "options": [
+            "func",
+            "def",
+            "define",
+            "function"
+        ],
+        "answer": "def"
+    },
+    {
+        "id": 3,
+        "question": "What data type is the object below?\nL = [1, 23, 'hello', 1]",
+        "options": [
+            "List",
+            "Dictionary",
+            "Tuple",
+            "Array"
+        ],
+        "answer": "List"
+    },
+    {
+        "id": 4,
+        "question": "Which of the following is NOT a valid variable name?",
+        "options": [
+            "_my_var",
+            "myVar",
+            "2myVar",
+            "my_var_2"
+        ],
+        "answer": "2myVar"
+    },
+    {
+        "id": 5,
+        "question": "How do you start a comment in Python?",
+        "options": [
+            "//",
+            "/*",
+            "#",
+            "--"
+        ],
+        "answer": "#"
+    }
+]

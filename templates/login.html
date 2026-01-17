@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Python Mastery Quiz</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <div class="container">
+        <div class="card" style="text-align: center; max-width: 450px; margin: 0 auto;">
+            <header class="quiz-header">
+                <h1>Welcome</h1>
+                <p style="color: var(--text-secondary); margin-bottom: 2rem;">Enter your name to start the challenge.
+                </p>
+            </header>
+
+            <form action="/api/login" method="POST">
+                <div style="margin-bottom: 2rem;">
+                    <input type="text" name="username" placeholder="Your Name" required
+                        style="width: 100%; padding: 1rem; border-radius: 12px; border: var(--glass-border); background: var(--option-bg); color: white; font-size: 1.1rem; outline: none;">
+                </div>
+                <button type="submit" class="btn primary-btn" style="width: 100%;">Start Quiz</button>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

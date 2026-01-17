@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Mastery Quiz</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <div class="container">
+        <div id="quiz-card" class="card">
+            <header class="quiz-header">
+                <h1>Python MCQ</h1>
+                <p>Player: <strong>{{ username }}</strong></p>
+                <div class="progress-container">
+                    <span id="question-count">Question 1/5</span>
+                    <div class="progress-bar">
+                        <div id="progress" class="progress-fill"></div>
+                    </div>
+                </div>
+            </header>
+
+            <div class="question-area">
+                <h2 id="question-text">Loading...</h2>
+                <div id="options-container" class="options-grid">
+                    <!-- Options injected here -->
+                </div>
+            </div>
+
+            <footer class="quiz-footer">
+                <button id="next-btn" class="btn primary-btn" disabled>Next Question</button>
+            </footer>
+        </div>
+
+        <!-- Result Modal -->
+        <div id="result-modal" class="modal hidden">
+            <div class="modal-content">
+                <h2>Quiz Completed!</h2>
+                <div class="score-display">
+                    <span id="final-score">0</span>
+                    <span class="total">/ 5</span>
+                </div>
+                <p id="feedback-msg">Great job!</p>
+                <button id="restart-btn" class="btn secondary-btn">Play Again</button>
+                <a href="/" class="btn secondary-btn"
+                    style="margin-left: 10px; text-decoration: none; padding: 0.8rem 2rem; display: inline-block;">Exit</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const USERNAME = "{{ username }}";
+    </script>
+    <script src="{{ url_for('static', filename='data.js') }}"></script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+
+</html>
