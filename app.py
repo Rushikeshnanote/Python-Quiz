@@ -21,11 +21,12 @@ def login():
 @app.route('/api/login', methods=['POST'])
 def handle_login():
     username = request.form.get('username')
+    difficulty = request.form.get('difficulty', 'medium') # Default to medium
     if username:
-        log_activity(f"User Login: {username}")
+        log_activity(f"User Login: {username} | Difficulty: {difficulty}")
         # Redirect to quiz with username as a query parameter or just render directly
         # Rendering directly to keep it simple without sessions for now
-        return render_template('quiz.html', username=username)
+        return render_template('quiz.html', username=username, difficulty=difficulty)
     return redirect(url_for('login'))
 
 @app.route('/api/log_visit', methods=['POST'])

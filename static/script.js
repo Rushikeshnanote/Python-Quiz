@@ -15,11 +15,32 @@ const feedbackMsg = document.getElementById('feedback-msg');
 const restartBtn = document.getElementById('restart-btn');
 
 // Initialize Quiz
+// Initialize Quiz
 function initQuiz() {
     currentQuestionIndex = 0;
     score = 0;
     userSelected = false;
     resultModal.classList.add('hidden');
+
+    // 1. Filter questions based on difficulty
+    let filteredQuestions = [];
+    if (typeof DIFFICULTY !== 'undefined' && DIFFICULTY !== 'mixed') {
+        filteredQuestions = questions.filter(q => q.difficulty === DIFFICULTY);
+    } else {
+        filteredQuestions = [...questions]; // Mixed: use all
+    }
+
+    // Fallback: If not enough questions in that difficulty, use all to prevent crash or empty
+    if (filteredQuestions.length === 0) {
+        console.warn(`No questions found for difficulty: ${DIFFICULTY}. Switching to mixed.`);
+        filteredQuestions = [...questions];
+    }
+
+    // 2. Shuffle and pick 10 random questions
+    shuffledQuestions = filteredQuestions.sort(() => 0.5 - Math.random());
+
+    // Select top 10 (or fewer if total is less than 10)
+    quizQuestions = shuffledQuestions.slice(0, 10);
 
     // Log visit
     fetch('/api/log_visit', {
@@ -37,14 +58,14 @@ function loadQuestion() {
     nextBtn.disabled = true;
 
     // Get current data
-    const currentData = questions[currentQuestionIndex];
+    const currentData = quizQuestions[currentQuestionIndex];
 
     // Update Text
-    questionText.innerHTML = currentData.question; // .innerHTML allows HTML tags in JSON (e.g. <br>)
-    questionCountFn.textContent = `Question ${currentQuestionIndex + 1}/${questions.length}`;
+    questionText.innerHTML = currentData.question;
+    questionCountFn.textContent = `Question ${currentQuestionIndex + 1}/${quizQuestions.length}`;
 
     // Update Progress Bar
-    const progressPercent = ((currentQuestionIndex) / questions.length) * 100;
+    const progressPercent = ((currentQuestionIndex) / quizQuestions.length) * 100;
     progressFill.style.width = `${progressPercent}%`;
 
     // Clear old options
@@ -87,7 +108,7 @@ function selectOption(btn, selectedOpt, correctOpt) {
 // Next Button Click
 nextBtn.addEventListener('click', () => {
     currentQuestionIndex++;
-    if (currentQuestionIndex < questions.length) {
+    if (currentQuestionIndex < quizQuestions.length) {
         loadQuestion();
     } else {
         showResults();
@@ -102,8 +123,19 @@ function showResults() {
     // Update final progress to 100%
     progressFill.style.width = '100%';
 
+    // Log Score
+    fetch('/api/log_score', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+            username: typeof USERNAME !== 'undefined' ? USERNAME : 'Anonymous',
+            score: score,
+            total: quizQuestions.length
+        }),
+    });
+
     // Custom feedback
-    const percentage = (score / questions.length) * 100;
+    const percentage = (score / quizQuestions.length) * 100;
     if (percentage === 100) {
         feedbackMsg.textContent = "Perfect! You're a Python Master! 🐍";
     } else if (percentage >= 70) {
@@ -115,6 +147,9 @@ function showResults() {
 
 // Restart Game
 restartBtn.addEventListener('click', initQuiz);
+
+// Global variable to hold current session questions
+let quizQuestions = [];
 
 // Start on load
 initQuiz();
