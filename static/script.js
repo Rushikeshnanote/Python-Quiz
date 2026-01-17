@@ -52,9 +52,9 @@ function loadQuestion() {
     // 1. Update Buttons State
     prevBtn.disabled = currentQuestionIndex === 0;
 
-    // If it's the last question, change Next to Finish
+    // If it's the last question, change Next to Submit
     if (currentQuestionIndex === quizQuestions.length - 1) {
-        nextBtn.textContent = "Finish";
+        nextBtn.textContent = "Submit Quiz";
     } else {
         nextBtn.textContent = "Next";
     }
@@ -81,7 +81,7 @@ function loadQuestion() {
     const storedAnswer = userAnswers[currentQuestionIndex];
     let isAnswered = storedAnswer !== undefined;
 
-    nextBtn.disabled = !isAnswered; // Disable Next if not answered
+    nextBtn.disabled = !isAnswered; // Disable until answered (or skipped via skip button)
 
     currentData.options.forEach((opt, index) => {
         const btn = document.createElement('button');
