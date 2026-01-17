@@ -355,5 +355,181 @@ const questions = [
     "options": ["1, 2, 3", "0, 1, 2", "0, 1, 2, 3", "1, 2"],
     "answer": "0, 1, 2",
     "difficulty": "easy"
+  },
+  // ADDED FROM USER (Batch 2)
+  {
+    "id": 51,
+    "question": "What is the output of print(10 % 3)?",
+    "options": ["1", "3", "0", "Error"],
+    "answer": "1",
+    "difficulty": "easy"
+  },
+  {
+    "id": 52,
+    "question": "Which function converts a string to integer?",
+    "options": ["str()", "int()", "float()", "eval()"],
+    "answer": "int()",
+    "difficulty": "easy"
+  },
+  {
+    "id": 53,
+    "question": "Which keyword is used to check a condition?",
+    "options": ["for", "if", "while", "def"],
+    "answer": "if",
+    "difficulty": "easy"
+  },
+  {
+    "id": 54,
+    "question": "What is the output of print('Hello'[0])?",
+    "options": ["H", "e", "Hello", "Error"],
+    "answer": "H",
+    "difficulty": "easy"
+  },
+  {
+    "id": 55,
+    "question": "Which loop is used when number of iterations is known?",
+    "options": ["while", "for", "do-while", "loop"],
+    "answer": "for",
+    "difficulty": "easy"
+  },
+  {
+    "id": 56,
+    "question": "What is the output of print(list(range(1,5)))?",
+    "options": ["[1,2,3,4,5]", "[1,2,3,4]", "[0,1,2,3,4]", "Error"],
+    "answer": "[1,2,3,4]",
+    "difficulty": "medium"
+  },
+  {
+    "id": 57,
+    "question": "Which function returns ASCII value of a character?",
+    "options": ["ascii()", "char()", "ord()", "chr()"],
+    "answer": "ord()",
+    "difficulty": "medium"
+  },
+  {
+    "id": 58,
+    "question": "What is the output of print(type([]))?",
+    "options": ["list", "<class 'list'>", "array", "tuple"],
+    "answer": "<class 'list'>",
+    "difficulty": "medium"
+  },
+  {
+    "id": 59,
+    "question": "Which method converts string to lowercase?",
+    "options": ["lower()", "down()", "small()", "min()"],
+    "answer": "lower()",
+    "difficulty": "medium"
+  },
+  {
+    "id": 60,
+    "question": "Which operator checks object identity?",
+    "options": ["==", "=", "is", "!="],
+    "answer": "is",
+    "difficulty": "medium"
+  },
+  {
+    "id": 61,
+    "question": "What is the output of print(sum([1,2,3]))?",
+    "options": ["5", "6", "7", "Error"],
+    "answer": "6",
+    "difficulty": "medium"
+  },
+  {
+    "id": 62,
+    "question": "Which keyword exits a loop?",
+    "options": ["exit", "stop", "break", "end"],
+    "answer": "break",
+    "difficulty": "medium"
+  },
+  {
+    "id": 63,
+    "question": "Which data type stores key-value pairs?",
+    "options": ["List", "Tuple", "Set", "Dictionary"],
+    "answer": "Dictionary",
+    "difficulty": "medium"
+  },
+  {
+    "id": 64,
+    "question": "What does len() return?",
+    "options": ["Size", "Length", "Count", "Index"],
+    "answer": "Length",
+    "difficulty": "medium"
+  },
+  {
+    "id": 65,
+    "question": "Which statement handles exceptions?",
+    "options": ["try-except", "if-else", "for-loop", "while"],
+    "answer": "try-except",
+    "difficulty": "medium"
+  },
+  {
+    "id": 66,
+    "question": "What is the output of print(bool([]))?",
+    "options": ["True", "False", "None", "Error"],
+    "answer": "False",
+    "difficulty": "hard"
+  },
+  {
+    "id": 67,
+    "question": "Which function returns an iterator?",
+    "options": ["iter()", "next()", "range()", "list()"],
+    "answer": "iter()",
+    "difficulty": "hard"
+  },
+  {
+    "id": 68,
+    "question": "What is the output of print(set([1,1,2,3]))?",
+    "options": ["[1,2,3]", "{1,2,3}", "(1,2,3)", "Error"],
+    "answer": "{1,2,3}",
+    "difficulty": "hard"
+  },
+  {
+    "id": 69,
+    "question": "Which decorator is used for static methods?",
+    "options": ["@method", "@staticmethod", "@class", "@property"],
+    "answer": "@staticmethod",
+    "difficulty": "hard"
+  },
+  {
+    "id": 70,
+    "question": "What is the output of print(5 == True)?",
+    "options": ["True", "False", "Error", "None"],
+    "answer": "False",
+    "difficulty": "hard"
+  },
+  {
+    "id": 71,
+    "question": "Which module is used for regular expressions?",
+    "options": ["regex", "pyregex", "re", "pattern"],
+    "answer": "re",
+    "difficulty": "hard"
+  },
+  {
+    "id": 72,
+    "question": "What does PEP stand for?",
+    "options": ["Python Easy Program", "Python Enhancement Proposal", "Program Execution Plan", "Python Error Policy"],
+    "answer": "Python Enhancement Proposal",
+    "difficulty": "hard"
+  },
+  {
+    "id": 73,
+    "question": "Which keyword is used to define anonymous functions?",
+    "options": ["def", "lambda", "func", "anon"],
+    "answer": "lambda",
+    "difficulty": "hard"
+  },
+  {
+    "id": 74,
+    "question": "What is the output of print(type(None))?",
+    "options": ["None", "null", "<class 'NoneType'>", "void"],
+    "answer": "<class 'NoneType'>",
+    "difficulty": "hard"
+  },
+  {
+    "id": 75,
+    "question": "Which keyword is used to inherit a class?",
+    "options": ["inherits", "extends", "super", "class"],
+    "answer": "class",
+    "difficulty": "hard"
   }
 ];
